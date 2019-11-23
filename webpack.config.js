@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './src',
   output: {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
@@ -23,9 +23,6 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          query: {
-            presets: ['@babel/preset-react'],
-          },
           loader: 'babel-loader',
         },
       },
